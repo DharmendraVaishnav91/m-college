@@ -7,12 +7,27 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-card *ngFor="let announcement of announcements" (click)="showAnnouncementDetail(announcement)">
+    <ion-item>
+      <ion-avatar item-start>
+        <ion-icon ios="ios-megaphone" md="md-megaphone"></ion-icon>
+      </ion-avatar>
+      <h2>{{announcement.title}}</h2>
+      <p>{{announcement.class}}</p>
+    </ion-item>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <img [src]="announcement.imageURL">
+
+    <ion-card-content>
+      <p>{{announcement.detail}}</p>
+    </ion-card-content>
+    <ion-item>
+      <h2>{{announcement.postedBy}}</h2>
+      <p>{{announcement.createdDate}}</p>
+    </ion-item>
+  </ion-card>
+
+  <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->
 </ion-content>
