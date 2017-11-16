@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Announcement Detail</ion-title>
   </ion-navbar>
 </ion-header>
@@ -10,26 +10,41 @@
     <!-- <div style="text-align:right;padding:2px;">
       <span>Posted By: {{currentAnnouncement.postedBy}}</span>
     </div> -->
+
     <ion-list>
       <ion-item>
-        <ion-label stacked>Posted By</ion-label>
+        <div style="color:gray">Posted By</div>
         <div>
           {{currentAnnouncement.postedBy}}
         </div>
       </ion-item>
       <ion-item>
-          <ion-label stacked> Posted On</ion-label>
+          <div style="color:gray"> Posted On</div>
           <div>
+            {{currentAnnouncement.createdDate}}
+          </div>
+      </ion-item>
+      <ion-item>
+          <div style="color:gray">Detail</div>
+          <div text-wrap>
             {{currentAnnouncement.detail}}
           </div>
       </ion-item>
       <ion-item>
-        <ion-label>
+        <div style="color:gray">
             For Class
-        </ion-label>
-        <div>
-            <span class="balanced-label">{{currentAnnouncement.class}}</span
         </div>
+        <div>
+            <span class="balanced-label">{{currentAnnouncement.class}}</span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div style="color:gray">
+            Attachment
+        </div>
+        <ion-thumbnail>
+          <img [src]="currentAnnouncement.imageURL" (click)="openPhotoViewer(currentAnnouncement.imageURL)"/>
+        </ion-thumbnail>
       </ion-item>
     </ion-list>
 </ion-content>

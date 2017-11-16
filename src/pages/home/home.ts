@@ -7,7 +7,7 @@ import { AnnouncementDetail } from '../home/announcement-detail';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  announcements:Array<{title:string,class:string,createdBy:string,createdDate:string,detail:string,imageURL:string}>;
+  announcements:Array<{title:string,class:string,postedBy:string,createdDate:string,detail:string,imageURL:string}>;
   constructor(public navCtrl: NavController) {
     this.announcements=[{
       title:"Holiday",
