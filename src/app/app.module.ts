@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { AnnouncementDetail } from '../pages/home/announcement-detail';
+import { AnnouncementPost } from '../pages/home/announcement-post';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,7 +17,8 @@ import { PhotoViewer } from '@ionic-native/photo-viewer';
     MyApp,
     HomePage,
     ListPage,
-    AnnouncementDetail
+    AnnouncementDetail,
+    AnnouncementPost
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { PhotoViewer } from '@ionic-native/photo-viewer';
     MyApp,
     HomePage,
     ListPage,
-    AnnouncementDetail
+    AnnouncementDetail,
+    AnnouncementPost
   ],
   providers: [
     StatusBar,

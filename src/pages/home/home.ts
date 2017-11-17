@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AnnouncementDetail } from '../home/announcement-detail';
+import { AnnouncementPost } from '../home/announcement-post';
 
 @Component({
   selector: 'page-home',
@@ -30,5 +31,9 @@ export class HomePage {
     this.navCtrl.push(AnnouncementDetail,{
       announcement:announcement
     });
+  }
+
+  showCreateAnnouncementForm(){
+    this.navCtrl.push(AnnouncementPost);
   }
 }
