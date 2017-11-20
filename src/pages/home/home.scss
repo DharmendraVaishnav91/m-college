@@ -9,3 +9,10 @@ page-home {
     padding: 0px 5px;
     border-radius: 3px;
 }
+.no-border{
+  border:0px !important;
+}
+ion-app [no-border],
+ion-app [no-border] .scroll-content {
+  border:0px !important;
+}

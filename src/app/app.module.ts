@@ -11,7 +11,7 @@ import { AnnouncementPost } from '../pages/home/announcement-post';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
-
+import { FileChooser } from '@ionic-native/file-chooser';
 @NgModule({
   declarations: [
     MyApp,
@@ -36,6 +36,7 @@ import { PhotoViewer } from '@ionic-native/photo-viewer';
     StatusBar,
     SplashScreen,
     PhotoViewer,
+    FileChooser,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
