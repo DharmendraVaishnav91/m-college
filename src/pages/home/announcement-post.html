@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>New Announcement</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="md-send"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="createAnnouncemnetForm">
+    <ion-item >
+      <ion-label floating> Title</ion-label>
+      <ion-input type="text" formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!createAnnouncemnetForm.controls.title.valid && createAnnouncemnetForm.controls.title.dirty">
+      <p> Title is required</p>
+    </ion-item>
+    <ion-item >
+        <ion-label>For</ion-label>
+        <ion-select  formControlName="for">
+          <ion-option value="College">College</ion-option>
+          <ion-option value="Division">Division</ion-option>
+          <ion-option value="Batch">Batch</ion-option>
+          <ion-option value="All HOD">All HOD</ion-option>
+          <ion-option value="All Teacher">All Teacher</ion-option>
+          <ion-option value="All Parent">All Parent</ion-option>
+          <ion-option value="All Student">All Student</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item >
+      <ion-label floating>Detail</ion-label>
+      <ion-textarea  formControlName="detail"></ion-textarea>
+    </ion-item>
+    <div>
+      <ion-label style="padding-left: 16px;color: #999;font-size: 16px;">Attachment</ion-label>
+      <button ion-button clear color="balanced" (click)="openFileChooser()">
+        <ion-icon name="md-attach"></ion-icon>&nbsp;Attach file
+      </button>
+    </div>
+  </form>
+</ion-content>
